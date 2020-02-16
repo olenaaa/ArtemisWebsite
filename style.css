@@ -1,0 +1,181 @@
+@font-face {
+    font-family: proximaNovaSemibold;
+    src: url(fonts/proxima_nova_semibold.otf);
+}
+
+#webchatContainer input:focus::placeholder {
+  color: transparent;
+}
+
+#webchatContainer input:focus,
+#webchatContainer select:focus,
+#webchatContainer textarea:focus,
+#webchatContainer button:focus {
+    outline: none;
+}
+
+#webchatContainer {
+    position: fixed;
+    bottom: 170px;
+    right: 20px;
+    
+    width: 503px;
+    height: 479px;
+    
+    z-index: 9999999;
+    
+    display: none;
+    
+    box-shadow: 0px 0px 20px 4px #ccdeff;
+}
+
+#upperPart {
+    border-radius: 5px 5px 0 0;
+    background-color: #1968fc;
+    width: 100%;
+    height: 55px;
+    display: flex;
+    align-items: center;
+
+}
+
+@media only screen and (max-width: 600px) {
+    #webchatContainer {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: inherit;
+        height: calc(100% - 55px);
+    }
+    
+    #upperPart {
+        border-radius: 0;
+    }
+}
+
+#webchat {
+    border-radius: 5px;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+}
+
+#chatIcon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999998;
+}
+
+#chatIcon img {
+    cursor: pointer;
+}
+
+#upperMessage {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#text2 {
+    margin-left: 10px;
+    color: #4e4e4e;
+    font-family: proximaNovaSemibold;
+    font-size: 14px;
+}
+
+#welcomeMessage {
+    text-align: center;
+    margin-top: 80px;
+}
+
+#webchat .main {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    width: 100%;
+    height: 55px;
+    box-shadow: 1px 1px 4px 1px #ccdeff;
+    
+}
+
+#icon {
+    padding-left: 10px;
+}
+
+#text1 {
+    margin-left: 10px;
+    color: #ffffff;
+    font-family: proximaNovaSemibold;
+    font-size: 14px;
+}
+
+#closeIcon {
+    position: absolute;
+    right: 20px;
+    top: 12px;
+    cursor: pointer;
+}
+
+#webchat li[role="listitem"] {
+    margin-left: 10px;
+    color: #4e4e4e;
+    font-family: proximaNovaSemibold;
+    font-size: 14px;
+}
+
+#messagesPlaceholder {
+    position: absolute;
+    top: 70px;
+    width: 100%;
+}
+
+#mic {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    flex-wrap: wrap;
+    align-content: space-around;
+}
+
+#micMessage {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 299px;
+    height: 37px;
+    color: #aaaaaa;
+    font-family: proximaNovaSemibold;
+    font-size: 14px;
+    text-align: center;
+}
+
+#attachment {
+    display: flex;
+    align-items: center;
+    width: 21px;
+    height: 24px;
+    margin-left: 20px;
+}
+
+input[data-id="webchat-sendbox-input"] {
+    margin-left: 20px;
+    color: #9c9c9c;
+    font-family: proximaNovaSemibold;
+    font-size: 14px;
+}
+
+div[aria-controls="webchatSendBoxMicrophoneButton"] > button > svg {
+    display: none;
+}
+
+div[aria-controls="webchatSendBoxMicrophoneButton"] > button {
+    width: 40px;
+    height: 40px;
+    background-image: url("images/mic%20icon.svg");
+    background-size: cover;
+    margin-right: 12px;
+    
+}
